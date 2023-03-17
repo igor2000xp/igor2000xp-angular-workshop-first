@@ -1,0 +1,4 @@
+src/graphql/gen*.*
+src/UI/templates/*
+src/assets/*
+karma.conf.js
