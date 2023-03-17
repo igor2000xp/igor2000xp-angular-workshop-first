@@ -1,9 +1,4 @@
 {
-  "settings": {
-    "import/resolver": {
-      "typescript": {}
-    }
-  },
   "root": true,
   "ignorePatterns": [
     "projects/**/*"
@@ -14,26 +9,12 @@
         "*.ts"
       ],
       "extends": [
-        "airbnb-base",
-        "plugin:import/typescript",
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:@angular-eslint/recommended",
-        "plugin:@angular-eslint/template/process-inline-templates",
-        "plugin:prettier/recommended"
+        "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
-        "@typescript-eslint/no-unused-vars": "warn",
-        "import/prefer-default-export": "off",
-        "no-useless-constructor": "off",
-        "linebreak-style": "off",
-        "@typescript-eslint/no-useless-constructor": "warn",
-        "@angular-eslint/no-empty-lifecycle-method": "warn",
-        "@typescript-eslint/no-empty-function": "warn",
-        "class-methods-use-this": "off",
-        "no-empty-function": "off",
-        "arrow-body-style": "off",
-        "no-console": "off",
         "@angular-eslint/directive-selector": [
           "error",
           {
@@ -48,13 +29,6 @@
             "type": "element",
             "prefix": "app",
             "style": "kebab-case"
-          }
-        ],
-        "import/extensions": [
-          "error",
-          "ignorePackages",
-          {
-            "ts": "never"
           }
         ]
       }
