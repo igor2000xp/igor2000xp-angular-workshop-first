@@ -1,8 +1,8 @@
 <div class="content-item">
-  <form class="example-form" (submit)="submitUserName()">
+  <form class="example-form" (submit)="submitUserName(currentName)">
     <mat-form-field class="example-full-width">
       <mat-label>Enter your name</mat-label>
-      <input class="input-name" matInput [(ngModel)]="enterName" name="username">
+      <input class="input-name" matInput [(ngModel)]="currentName" name="username">
     </mat-form-field>
 
     <button mat-button type="submit">Submit</button>
@@ -10,7 +10,7 @@
 
   <div *ngIf="userNameSubmitted">
     <h1>{{ currentDate | date: 'mediumTime' }}</h1>
-    <h2>{{ currentDate | timeGreeting }}, {{ enterName }}</h2>
+    <h2>{{ currentDate | timeGreeting }}, {{ currentName }}</h2>
   </div>
 </div>
 
