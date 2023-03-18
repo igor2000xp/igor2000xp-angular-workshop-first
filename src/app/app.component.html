@@ -10,7 +10,7 @@
 
   <div *ngIf="userNameSubmitted">
     <h1>{{ currentDate | date: 'mediumTime' }}</h1>
-    <h2></h2>
+    <h2>{{ currentDate | timeGreeting }}, {{ enterName }}</h2>
   </div>
 </div>
 
