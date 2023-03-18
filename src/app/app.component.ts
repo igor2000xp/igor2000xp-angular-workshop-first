@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TodoModel } from './model/todo-model';
+import { mockTodoList } from './constants/todo-constant';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +14,8 @@ export class AppComponent implements OnInit {
   userNameSubmitted = false;
 
   currentDate = new Date();
+
+  todoItems: TodoModel[] = mockTodoList;
 
   private readonly localStorageKey = 'momentumUserName';
 

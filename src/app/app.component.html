@@ -11,6 +11,11 @@
   <div *ngIf="userNameSubmitted">
     <h1>{{ currentDate | date: 'mediumTime' }}</h1>
     <h2>{{ currentDate | timeGreeting }}, {{ currentName }}</h2>
+
+    <mat-card>
+      <mat-card-content>Simple card</mat-card-content>
+    </mat-card>
+
   </div>
 </div>
 
