@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TodoModel } from './model/todo-model';
 import { mockTodoList } from './constants/todo-constant';
 
@@ -7,7 +7,7 @@ import { mockTodoList } from './constants/todo-constant';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
   title = 'angular-workshop-first';
   currentName = '';
 
@@ -18,6 +18,8 @@ export class AppComponent implements OnInit {
   todoItems: TodoModel[] = mockTodoList;
 
   newTodoItem = '';
+
+  deleteInterval?: NodeJS.Timer;
 
   private readonly localStorageKey = 'momentumUserName';
 
@@ -44,11 +46,13 @@ export class AppComponent implements OnInit {
     if (savedName) {
       this.currentName = savedName;
       this.userNameSubmitted = true;
-
     }
-
-    setInterval(() => {
+    this.deleteInterval = setInterval(() => {
       this.currentDate = new Date();
     }, 1000)
+  }
+
+  ngOnDestroy(): void {
+    clearInterval(this.deleteInterval);
   }
 }
