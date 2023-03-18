@@ -17,12 +17,24 @@ export class AppComponent implements OnInit {
 
   todoItems: TodoModel[] = mockTodoList;
 
+  newTodoItem = '';
+
   private readonly localStorageKey = 'momentumUserName';
 
   submitUserName(enteredName: string): void {
     this.userNameSubmitted = true;
     this.currentName = enteredName;
     localStorage.setItem(this.localStorageKey, this.currentName);
+  }
+
+  submitTodo() {
+    this.todoItems = [... this.todoItems, {
+      id: this.todoItems.length,
+      status: 'todo',
+      title: this.newTodoItem,
+      completed: false,
+    }];
+    this.newTodoItem = '';
   }
 
   ngOnInit() {

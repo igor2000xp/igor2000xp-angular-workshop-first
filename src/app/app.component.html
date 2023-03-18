@@ -12,8 +12,21 @@
     <h1>{{ currentDate | date: 'mediumTime' }}</h1>
     <h2>{{ currentDate | timeGreeting }}, {{ currentName }}</h2>
 
+    <form class="example-form" (submit)="submitTodo()">
+      <mat-form-field class="example-full-width">
+        <mat-label>What are you going to do?</mat-label>
+        <input class="input-name" matInput [(ngModel)]="newTodoItem" name="username">
+      </mat-form-field>
+
+      <button mat-button type="submit">Submit</button>
+    </form>
+
     <mat-card>
-      <mat-card-content>Simple card</mat-card-content>
+      <mat-card-content>
+        <div class="todo-item" *ngFor="let item of todoItems">
+          <mat-checkbox class="example-margin">{{ item.title }}</mat-checkbox>
+        </div>
+      </mat-card-content>
     </mat-card>
 
   </div>
