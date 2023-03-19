@@ -14,10 +14,6 @@ export class AppComponent implements OnInit {
 
   currentDate = new Date();
 
-  // todoItems: TodoModel[] = mockTodoList;
-  //
-  // newTodoItem = '';
-
   deleteInterval?: NodeJS.Timer;
 
   private readonly localStorageKey = 'momentumUserName';
@@ -28,16 +24,6 @@ export class AppComponent implements OnInit {
     localStorage.setItem(this.localStorageKey, this.currentName);
   }
 
-  // submitTodo() {
-  //   this.todoItems = [... this.todoItems, {
-  //     id: this.todoItems.length,
-  //     status: 'todo',
-  //     title: this.newTodoItem,
-  //     completed: false,
-  //   }];
-  //   this.newTodoItem = '';
-  // }
-
   ngOnInit() {
     // TODO moved to the service
     const savedName = localStorage.getItem(this.localStorageKey);
@@ -46,8 +32,5 @@ export class AppComponent implements OnInit {
       this.currentName = savedName;
       this.userNameSubmitted = true;
     }
-    // this.deleteInterval = setInterval(() => {
-    //   this.currentDate = new Date();
-    // }, 1000)
   }
 }

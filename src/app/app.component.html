@@ -1,42 +1,8 @@
 <div class="content-item">
   <app-user-input (submitUser)="submitUserName($event)" />
-<!--  <form class="example-form" (submit)="submitUserName(currentName)">-->
-<!--    <mat-form-field class="example-full-width">-->
-<!--      <mat-label>Enter your name</mat-label>-->
-<!--      <input class="input-name" matInput [(ngModel)]="currentName" name="username">-->
-<!--    </mat-form-field>-->
-
-<!--    <button mat-button type="submit">Submit</button>-->
-<!--  </form>-->
-
   <div *ngIf="userNameSubmitted">
     <app-greeting [currentName]="currentName" />
-<!--    <h1>{{ currentDate | date: 'mediumTime' }}</h1>-->
-<!--    <h2>{{ currentDate | timeGreeting }}, {{ currentName }}</h2>-->
-
     <app-todo-list />
-<!--    <form class="example-form" (submit)="submitTodo()">-->
-<!--      <mat-form-field class="example-full-width">-->
-<!--        <mat-label>What are you going to do?</mat-label>-->
-<!--        <input class="input-name" matInput [(ngModel)]="newTodoItem" name="username">-->
-<!--      </mat-form-field>-->
-
-<!--      <button mat-button type="submit">Submit</button>-->
-<!--    </form>-->
-
-<!--    <mat-card>-->
-<!--      <mat-card-content>-->
-<!--        <div class="todo-item" *ngFor="let item of todoItems">-->
-<!--          <mat-checkbox-->
-<!--            class="example-margin"-->
-<!--            [(ngModel)]="item.completed"-->
-<!--          >-->
-<!--            {{ item.title }}-->
-<!--          </mat-checkbox>-->
-<!--        </div>-->
-<!--      </mat-card-content>-->
-<!--    </mat-card>-->
-
   </div>
 </div>
 

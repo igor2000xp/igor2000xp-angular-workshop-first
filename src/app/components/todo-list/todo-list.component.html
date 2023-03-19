@@ -1,8 +1,7 @@
-<!--<p>todo-list works!</p>-->
 <form class="example-form" (submit)="submitTodo()">
   <mat-form-field class="example-full-width">
     <mat-label>What are you going to do?</mat-label>
-    <input class="input-name" matInput [(ngModel)]="newTodoItem" name="username">
+    <input class="input-todo" matInput [(ngModel)]="newTodoItem" name="username">
   </mat-form-field>
 
   <button mat-button type="submit">Submit</button>
