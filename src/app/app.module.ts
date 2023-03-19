@@ -13,6 +13,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { UserInputComponent } from './components/user-input/user-input.component';
 import { GreetingComponent } from './components/greeting/greeting.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
+import { TaskCompletedDirective } from './directives/task-completed.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
     TimeGreetingPipe,
     UserInputComponent,
     GreetingComponent,
-    TodoListComponent
+    TodoListComponent,
+    TaskCompletedDirective
   ],
   imports: [
     BrowserModule,
