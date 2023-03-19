@@ -1,5 +1,5 @@
 <div class="content-item">
-  <app-user-input />
+  <app-user-input (submitUser)="submitUserName($event)" />
 <!--  <form class="example-form" (submit)="submitUserName(currentName)">-->
 <!--    <mat-form-field class="example-full-width">-->
 <!--      <mat-label>Enter your name</mat-label>-->
@@ -10,7 +10,7 @@
 <!--  </form>-->
 
   <div *ngIf="userNameSubmitted">
-    <app-greeting />
+    <app-greeting [currentName]="currentName" />
 <!--    <h1>{{ currentDate | date: 'mediumTime' }}</h1>-->
 <!--    <h2>{{ currentDate | timeGreeting }}, {{ currentName }}</h2>-->
 

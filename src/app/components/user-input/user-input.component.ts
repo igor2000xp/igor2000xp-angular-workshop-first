@@ -11,7 +11,6 @@ export class UserInputComponent {
   currentName = '';
 
   submitUserName() {
-
     this.submitUser.emit(this.currentName);
     this.currentName = '';
   }
