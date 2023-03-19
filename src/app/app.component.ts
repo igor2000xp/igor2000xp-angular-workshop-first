@@ -1,23 +1,22 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { TodoModel } from './model/todo-model';
-import { mockTodoList } from './constants/todo-constant';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnInit {
   title = 'angular-workshop-first';
+
   currentName = '';
 
   userNameSubmitted = false;
 
   currentDate = new Date();
 
-  todoItems: TodoModel[] = mockTodoList;
-
-  newTodoItem = '';
+  // todoItems: TodoModel[] = mockTodoList;
+  //
+  // newTodoItem = '';
 
   deleteInterval?: NodeJS.Timer;
 
@@ -29,15 +28,15 @@ export class AppComponent implements OnInit, OnDestroy {
     localStorage.setItem(this.localStorageKey, this.currentName);
   }
 
-  submitTodo() {
-    this.todoItems = [... this.todoItems, {
-      id: this.todoItems.length,
-      status: 'todo',
-      title: this.newTodoItem,
-      completed: false,
-    }];
-    this.newTodoItem = '';
-  }
+  // submitTodo() {
+  //   this.todoItems = [... this.todoItems, {
+  //     id: this.todoItems.length,
+  //     status: 'todo',
+  //     title: this.newTodoItem,
+  //     completed: false,
+  //   }];
+  //   this.newTodoItem = '';
+  // }
 
   ngOnInit() {
     // TODO moved to the service
@@ -47,12 +46,8 @@ export class AppComponent implements OnInit, OnDestroy {
       this.currentName = savedName;
       this.userNameSubmitted = true;
     }
-    this.deleteInterval = setInterval(() => {
-      this.currentDate = new Date();
-    }, 1000)
-  }
-
-  ngOnDestroy(): void {
-    clearInterval(this.deleteInterval);
+    // this.deleteInterval = setInterval(() => {
+    //   this.currentDate = new Date();
+    // }, 1000)
   }
 }

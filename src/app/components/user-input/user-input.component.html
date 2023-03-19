@@ -1,0 +1,9 @@
+<!--<p>user-input works!</p>-->
+<form class="example-form" (submit)="submitUserName()">
+  <mat-form-field class="example-full-width">
+    <mat-label>Enter your name</mat-label>
+    <input class="input-name" matInput [(ngModel)]="currentName" name="username">
+  </mat-form-field>
+
+  <button mat-button type="submit">Submit</button>
+</form>

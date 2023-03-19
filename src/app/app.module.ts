@@ -10,11 +10,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { TimeGreetingPipe } from './pipes/time-greeting.pipe';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { UserInputComponent } from './components/user-input/user-input.component';
+import { GreetingComponent } from './components/greeting/greeting.component';
+import { TodoListComponent } from './components/todo-list/todo-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TimeGreetingPipe
+    TimeGreetingPipe,
+    UserInputComponent,
+    GreetingComponent,
+    TodoListComponent
   ],
   imports: [
     BrowserModule,
