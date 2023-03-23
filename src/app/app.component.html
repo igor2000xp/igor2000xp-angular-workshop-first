@@ -1,6 +1,6 @@
 <div class="content-item">
   <app-user-input (submitUser)="submitUserName($event)" />
-  <div *ngIf="userNameSubmitted">
+  <div *ngIf="currentName">
     <app-greeting [currentName]="currentName" />
     <app-todo-list />
   </div>

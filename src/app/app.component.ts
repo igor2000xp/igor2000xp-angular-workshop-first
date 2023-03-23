@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from './core/services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -7,30 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'angular-workshop-first';
-
   currentName = '';
+  // userNameSubmitted = false;
+  // currentDate = new Date();
+  // deleteInterval?: NodeJS.Timer;
+  // private readonly localStorageKey = 'momentumUserName';
 
-  userNameSubmitted = false;
-
-  currentDate = new Date();
-
-  deleteInterval?: NodeJS.Timer;
-
-  private readonly localStorageKey = 'momentumUserName';
-
-  submitUserName(enteredName: string): void {
-    this.userNameSubmitted = true;
-    this.currentName = enteredName;
-    localStorage.setItem(this.localStorageKey, this.currentName);
+  constructor(private userService: UserService) {
   }
 
   ngOnInit() {
-    // TODO moved to the service
-    const savedName = localStorage.getItem(this.localStorageKey);
-
-    if (savedName) {
-      this.currentName = savedName;
-      this.userNameSubmitted = true;
-    }
+    this.currentName = this.userService.getSavedUser();
   }
+  submitUserName(enteredName: string): void {
+    this.currentName = enteredName;
+    this.userService.submitUserName(enteredName);
+  }
+
 }

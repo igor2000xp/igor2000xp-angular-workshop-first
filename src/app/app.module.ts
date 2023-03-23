@@ -14,6 +14,8 @@ import { UserInputComponent } from './components/user-input/user-input.component
 import { GreetingComponent } from './components/greeting/greeting.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { TaskCompletedDirective } from './directives/task-completed.directive';
+import { CoreModule } from './core/core.module';
+
 
 @NgModule({
   declarations: [
@@ -25,11 +27,12 @@ import { TaskCompletedDirective } from './directives/task-completed.directive';
     TaskCompletedDirective
   ],
   imports: [
+    CoreModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatInputModule,
     FormsModule,
+    MatInputModule,
     MatButtonModule,
     MatCardModule,
     MatCheckboxModule,
