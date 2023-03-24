@@ -20,9 +20,9 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.currentName = this.userService.getSavedUser();
   }
-  submitUserName(enteredName: string): void {
-    this.currentName = enteredName;
-    this.userService.submitUserName(enteredName);
-  }
+  // submitUserName(enteredName: string): void {
+  //   this.currentName = enteredName;
+  //   this.userService.submitUserName(enteredName);
+  // }
 
 }
