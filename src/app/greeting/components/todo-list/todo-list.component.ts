@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TodoModel } from '../../shared/model/todo-model';
+import { TodoModel } from '../../../shared/model/todo-model';
 import { mockTodoList } from '../../constants/todo-constant';
 
 @Component({

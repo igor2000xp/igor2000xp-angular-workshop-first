@@ -7,9 +7,7 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 })
 export class GreetingComponent implements OnInit, OnDestroy {
   @Input()  currentName = '';
-
   currentDate = new Date();
-
   deleteInterval?: NodeJS.Timer;
 
   ngOnInit() {
