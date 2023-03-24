@@ -5,10 +5,6 @@
   .input-todo {
     margin-top: 15px;
     text-decoration: line-through;
-
-    //.strikethrough-checkbox .mat-checkbox-label {
-    //  text-decoration: line-through;
-    //}
   }
 
   .strikethrough-checkbox > label {
@@ -18,14 +14,12 @@
       text-decoration: line-through;
     }
   }
-  //mat-check-box {
   mat-checkbox {
     text-decoration: line-through;
     .mdc-form-field {
       text-decoration: line-through;
     }
   }
-  //}
   .mat-mdc-checkbox label {
     text-decoration: line-through;
   }

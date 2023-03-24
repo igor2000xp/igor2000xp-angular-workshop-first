@@ -9,7 +9,6 @@ import { mockTodoList } from '../../constants/todo-constant';
 })
 export class TodoListComponent {
   todoItems: TodoModel[] = mockTodoList;
-
   newTodoItem = '';
 
   submitTodo() {

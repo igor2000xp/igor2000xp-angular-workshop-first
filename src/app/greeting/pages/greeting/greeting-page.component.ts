@@ -13,11 +13,5 @@ export class GreetingPageComponent implements OnInit {
 
   ngOnInit() {
     this.currentName = this.userService.getSavedUser() || '';
-    // this.submitUserName(this.currentName);
   }
-
-  // submitUserName(enteredName: string): void {
-  //   this.currentName = enteredName;
-  //   this.userService.submitUserName(enteredName);
-  // }
 }

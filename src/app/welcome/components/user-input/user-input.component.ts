@@ -7,7 +7,6 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class UserInputComponent {
   @Output() submitUser = new EventEmitter<string>;
-
   currentName = '';
 
   submitUserName() {

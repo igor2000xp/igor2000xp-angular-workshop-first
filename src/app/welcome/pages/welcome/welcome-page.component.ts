@@ -8,15 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./welcome-page.component.scss']
 })
 export class WelcomePageComponent{
-  // currentName = '';
 
-  constructor(private userService: UserService, private router: Router) {
-  }
+  constructor(private userService: UserService, private router: Router) {}
 
-  submitUserName(enteredName: string): void {
-    // this.currentName = enteredName;
+  async submitUserName(enteredName: string) {
     this.userService.submitUserName(enteredName);
-    this.router.navigateByUrl('/greeting');
+    await this.router.navigateByUrl('/greeting');
   }
 
 }
