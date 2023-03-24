@@ -1,4 +1,4 @@
-import { TodoModel } from '../model/todo-model';
+import { TodoModel } from '../shared/model/todo-model';
 
 export const mockTodoList: TodoModel[] = [
   { id: 1, title: 'Conduct the webinar', status: 'todo', completed: false },
