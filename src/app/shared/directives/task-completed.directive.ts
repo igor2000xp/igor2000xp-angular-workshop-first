@@ -17,6 +17,8 @@ export class TaskCompletedDirective implements OnChanges, AfterViewInit {
   }
 
   private changeTextStyle() {
-    this.renderer.setAttribute(this.element.nativeElement, 'text-decoration', this.appTaskCompleted ? 'line-through' : 'none')
+    if (this.element) {
+      this.renderer.setStyle(this.element.nativeElement, 'text-decoration', this.appTaskCompleted ? 'line-through' : 'none');
+    }
   }
 }
